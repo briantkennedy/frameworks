@@ -338,9 +338,9 @@ func (r *RegoRewriter) refNeedsRewrite(ref ast.Ref) bool {
 		}
 	}
 
-	glog.V(1).Infof("ref needs rewrite: %s   %#v", ref, ref)
+	glog.V(vLogDetail).Infof("ref needs rewrite: %s   %#v", ref, ref)
 	for _, t := range ref {
-		glog.V(3).Infof("  term: %s %#v %#v", t, t, reflect.TypeOf(t.Value).String())
+		glog.V(vLogDetail).Infof("  term: %s %#v %#v", t, t, reflect.TypeOf(t.Value).String())
 	}
 	return true
 }
